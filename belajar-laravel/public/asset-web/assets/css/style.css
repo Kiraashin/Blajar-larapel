@@ -1,0 +1,328 @@
+:root {
+  --pg-blue-primary: #004b93;
+  --pg-blue-dark: #002e5b;
+  --pg-blue-light: #eaf3fb;
+  --pg-red: #e30613;
+  --pg-red-hover: #c4000c;
+  --pg-text-main: #1f2937;
+  --pg-text-muted: #6b7280;
+  --pg-bg-soft: #f8fafc;
+  --pg-border: #e5e7eb;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--pg-text-main);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Links & Buttons */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--pg-blue-primary);
+}
+.btn-pg-primary {
+  background-color: var(--pg-blue-primary);
+  color: #ffffff;
+  border: 1px solid var(--pg-blue-primary);
+}
+.btn-pg-primary:hover {
+  background-color: var(--pg-blue-dark);
+  color: #ffffff;
+}
+.btn-pg-red {
+  background-color: var(--pg-red);
+  color: #ffffff;
+}
+.btn-pg-red:hover {
+  background-color: var(--pg-red-hover);
+  color: #ffffff;
+}
+
+/* Top Sub-nav Links */
+.nav-top-link {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #4b5563;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+}
+.nav-top-link:hover, .nav-top-link.active {
+  color: var(--pg-blue-primary);
+  background-color: var(--pg-blue-light);
+}
+
+/* Custom Header Search */
+.pg-search-group {
+  border: 1.5px solid #d1d5db;
+  border-radius: 50rem;
+  overflow: hidden;
+  background: #ffffff;
+  transition: border-color 0.2s;
+}
+.pg-search-group:focus-within {
+  border-color: var(--pg-blue-primary);
+  box-shadow: 0 0 0 3px rgba(0, 75, 147, 0.12);
+}
+.pg-search-input {
+  border: none;
+  font-size: 0.875rem;
+  outline: none;
+  box-shadow: none !important;
+}
+
+/* Hero Promo Card */
+.hero-banner-card {
+  background: linear-gradient(135deg, #e30613 0%, #d8000d 40%, #004b93 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+}
+.banner-graphic-bg {
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+}
+
+/* Feature USP Badges */
+.usp-item {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.usp-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 75, 147, 0.08);
+  border-color: #dbeafe;
+}
+
+/* Category Icons Grid */
+.cat-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.85rem 0.5rem;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+.cat-icon-card:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 75, 147, 0.07);
+}
+.cat-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #f0f7ff;
+  color: var(--pg-blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.cat-icon-card:hover .cat-icon-wrapper {
+  background: var(--pg-blue-primary);
+  color: #ffffff;
+}
+.cat-title {
+  font-size: 0.785rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.25;
+}
+
+/* Product Cards */
+.product-card {
+  border: 1px solid #eef2f6;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 75, 147, 0.09);
+  border-color: #cbd5e1;
+  transform: translateY(-4px);
+}
+.product-img-container {
+  position: relative;
+  background: #f8fafc;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.product-card:hover .product-img-container img {
+  transform: scale(1.05);
+}
+.product-badge-corner {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+/* Category Nav Pills */
+.pg-category-pills {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+.pg-category-pills::-webkit-scrollbar {
+  height: 4px;
+}
+.pg-category-pills::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.pill-filter-btn {
+  white-space: nowrap;
+  border-radius: 50rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #4b5563;
+}
+.pill-filter-btn.active, .pill-filter-btn:hover {
+  background: var(--pg-blue-primary);
+  color: #ffffff;
+  border-color: var(--pg-blue-primary);
+}
+
+/* Machine & Client logos */
+.partner-logo-box {
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #64748b;
+  letter-spacing: -0.5px;
+  transition: all 0.2s;
+}
+.partner-logo-box:hover {
+  border-color: var(--pg-blue-primary);
+  color: var(--pg-blue-primary);
+}
+
+/* Article Cards */
+.article-card {
+  border: 1px solid #edf2f7;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* CTA WhatsApp Banner */
+.cta-wa-banner {
+  background: linear-gradient(100deg, #ffffff 0%, #f0f7ff 100%);
+  border: 1.5px solid #dbeafe;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Comprehensive Footer Styles */
+.main-footer {
+  background-color: #0b1a2e;
+  color: #cbd5e1;
+  font-size: 0.865rem;
+}
+.footer-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.2px;
+}
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links-list li {
+  margin-bottom: 0.6rem;
+}
+.footer-links-list a {
+  color: #94a3b8;
+}
+.footer-links-list a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+.footer-trust-bar {
+  background: #11253e;
+  border-top: 1px solid #1e3a5f;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+/* Floating WhatsApp Button */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-wa-btn:hover {
+  transform: scale(1.08);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+}

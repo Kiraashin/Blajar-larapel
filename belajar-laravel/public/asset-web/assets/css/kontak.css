@@ -1,0 +1,39 @@
+/* Hubungi Kami page styles — builds on tokens in style.css */
+
+.kontak-channel {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.kontak-channel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 46, 91, 0.08) !important;
+}
+
+#kontakForm .form-control {
+  font-size: 0.9rem;
+  border-color: var(--pg-border);
+  padding: 0.6rem 0.85rem;
+}
+#kontakForm .form-control:focus {
+  border-color: var(--pg-blue-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 75, 147, 0.12);
+}
+#kontakForm .was-validated .form-control:valid,
+#kontakForm.was-validated .form-control:valid {
+  border-color: var(--pg-border);
+  background-image: none;
+  padding-right: 0.85rem;
+}
+
+.kontak-social {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pg-blue-primary);
+}
+.kontak-social:hover {
+  background-color: var(--pg-blue-primary);
+  border-color: var(--pg-blue-primary) !important;
+  color: #ffffff;
+}
